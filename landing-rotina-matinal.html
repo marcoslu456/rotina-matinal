@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rotina Matinal de Alto Desempenho</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',sans-serif;background:#F9F6F1;color:#1A1208}
+.hero{background:linear-gradient(135deg,#1A0A00 0%,#3D1F00 60%,#1A0A00 100%);padding:70px 24px 90px;text-align:center;position:relative;overflow:hidden}
+.hero::after{content:'☀';position:absolute;font-size:200px;opacity:0.05;bottom:-40px;right:-20px}
+.badge{display:inline-block;background:#E8A020;color:#fff;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:7px 20px;border-radius:20px;margin-bottom:24px}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(30px,5vw,52px);font-weight:900;color:#F5F0E8;line-height:1.1;margin-bottom:20px}
+.hero h1 span{color:#E8A020}
+.hero p{font-size:17px;color:#C4A882;max-width:500px;margin:0 auto 36px;line-height:1.7}
+.cta-btn{display:inline-block;background:#E8A020;color:#fff;font-weight:700;font-size:17px;padding:18px 48px;border-radius:50px;text-decoration:none;border:none;cursor:pointer;transition:all 0.2s}
+.cta-btn:hover{background:#D4900F;transform:scale(1.03)}
+.price-info{margin-top:16px;color:#A07850;font-size:14px}
+.price-info strong{color:#E8A020;font-size:24px}
+.strip{background:#E8A020;padding:14px 24px;text-align:center;font-size:14px;font-weight:600;color:#fff;letter-spacing:0.5px}
+.section{padding:56px 24px;max-width:660px;margin:0 auto}
+.section-title{font-family:'Playfair Display',serif;font-size:30px;font-weight:700;color:#1A1208;margin-bottom:8px;text-align:center}
+.section-sub{text-align:center;color:#6A5A3A;margin-bottom:36px;font-size:15px}
+.pain-card{background:#fff;border-left:4px solid #E8A020;border-radius:0 10px 10px 0;padding:18px 22px;margin-bottom:14px;box-shadow:0 2px 8px rgba(0,0,0,0.05)}
+.pain-card p{color:#3A2A10;font-size:15px;line-height:1.6}
+.pain-card strong{color:#E8A020}
+.pilares-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.pilar{background:#fff;border-radius:14px;padding:20px;border:1px solid #EDE0CC;box-shadow:0 2px 8px rgba(0,0,0,0.04)}
+.pilar-icon{font-size:30px;margin-bottom:10px}
+.pilar h4{font-size:15px;font-weight:700;color:#1A1208;margin-bottom:6px}
+.pilar p{font-size:13px;color:#7A6A4A;line-height:1.5}
+.pilar-time{display:inline-block;background:#FFF3DC;color:#C47A00;font-size:11px;font-weight:600;padding:2px 10px;border-radius:10px;margin-top:8px}
+.bonus{background:#FFF8EE;border:2px dashed #E8A020;border-radius:14px;padding:22px;margin-top:16px;text-align:center}
+.bonus h4{color:#C47A00;font-size:15px;font-weight:700;margin-bottom:6px}
+.bonus p{font-size:13px;color:#7A6A4A}
+.dark-section{background:#1A0A00;padding:56px 24px}
+.dark-inner{max-width:660px;margin:0 auto}
+.dark-section .section-title{color:#F5F0E8}
+.dark-section .section-sub{color:#A07850}
+.bene{display:flex;gap:16px;align-items:flex-start;margin-bottom:24px}
+.bene-icon{width:46px;height:46px;background:#E8A020;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+.bene h4{font-size:15px;font-weight:600;color:#F5F0E8;margin-bottom:4px}
+.bene p{font-size:13px;color:#A07850;line-height:1.5}
+.depo{background:#fff;border-radius:14px;padding:22px;margin-bottom:14px;box-shadow:0 2px 8px rgba(0,0,0,0.05)}
+.stars{color:#E8A020;font-size:18px;margin-bottom:10px}
+.depo p{font-size:14px;color:#3A2A10;line-height:1.7;font-style:italic;margin-bottom:12px}
+.depo-name{font-size:13px;font-weight:600;color:#9A8A6A}
+.garantia{background:#F0FFF4;border:2px dashed #4A8A4A;border-radius:16px;padding:28px;text-align:center;margin:0 0 32px}
+.garantia-icon{font-size:52px;margin-bottom:10px}
+.garantia h3{font-size:20px;font-weight:700;color:#2A6A2A;margin-bottom:10px}
+.garantia p{font-size:14px;color:#4A8A4A;line-height:1.6}
+.faq{background:#fff;border-radius:12px;padding:20px;margin-bottom:12px;border:1px solid #EDE0CC}
+.faq h4{font-size:15px;font-weight:600;color:#1A1208;margin-bottom:8px}
+.faq p{font-size:14px;color:#6A5A3A;line-height:1.6}
+.final-cta{background:linear-gradient(135deg,#E8A020,#C47A00);padding:60px 24px;text-align:center}
+.final-cta h2{font-family:'Playfair Display',serif;font-size:30px;color:#fff;margin-bottom:12px}
+.final-cta p{color:#FFF0DC;font-size:15px;margin-bottom:28px;max-width:460px;margin-left:auto;margin-right:auto}
+.cta-white{display:inline-block;background:#fff;color:#C47A00;font-weight:700;font-size:17px;padding:18px 48px;border-radius:50px;text-decoration:none;border:none;cursor:pointer}
+.footer{text-align:center;padding:28px;font-size:12px;color:#9A8A6A;background:#F9F6F1}
+</style>
+</head>
+<body>
+
+<div class="strip">☀ Acesso imediato após a compra — funciona em celular, tablet e computador</div>
+
+<div class="hero">
+  <div class="badge">☀ E-book + checklist de 30 dias</div>
+  <h1>Rotina Matinal de<br><span>Alto Desempenho</span></h1>
+  <p>Transforme suas manhãs em 30 dias e domine o dia antes que ele comece — com um sistema simples que qualquer pessoa pode aplicar.</p>
+  <a href="https://www.hotmart.com/seu-link-aqui" class="cta-btn">Quero transformar minhas manhãs →</a>
+  <div class="price-info">por apenas <strong>R$ 27</strong> — acesso imediato e vitalício</div>
+</div>
+
+<div class="section">
+  <h2 class="section-title">Você se identifica com isso?</h2>
+  <p class="section-sub">Se sim, este e-book foi feito para você</p>
+  <div class="pain-card"><p>😴 Acorda <strong>cansado e sem energia</strong>, mesmo depois de dormir horas</p></div>
+  <div class="pain-card"><p>📱 A <strong>primeira coisa que faz</strong> ao acordar é pegar o celular e checar redes sociais</p></div>
+  <div class="pain-card"><p>😟 Sente que o dia <strong>te controla</strong> em vez de você controlar o dia</p></div>
+  <div class="pain-card"><p>🔁 Já tentou criar uma rotina mas <strong>nunca conseguiu manter</strong> por mais de uma semana</p></div>
+  <div class="pain-card"><p>⏰ Vive no modo <strong>apagando incêndio</strong> — sempre reagindo, nunca agindo</p></div>
+</div>
+
+<div style="background:#FFF8EE;padding:56px 24px">
+<div style="max-width:660px;margin:0 auto">
+  <h2 class="section-title">O que está dentro do e-book</h2>
+  <p class="section-sub">5 capítulos + checklist de 30 dias + bônus</p>
+  <div class="pilares-grid">
+    <div class="pilar">
+      <div class="pilar-icon">🧠</div>
+      <h4>A ciência das manhãs</h4>
+      <p>Por que as primeiras horas do dia são as mais poderosas e como usar isso a seu favor</p>
+      <span class="pilar-time">Capítulo 1</span>
+    </div>
+    <div class="pilar">
+      <div class="pilar-icon">⚙️</div>
+      <h4>Os 6 Pilares</h4>
+      <p>O sistema completo: Silêncio, Gratidão, Movimento, Leitura, Escrita e Visualização</p>
+      <span class="pilar-time">Capítulo 2</span>
+    </div>
+    <div class="pilar">
+      <div class="pilar-icon">🎯</div>
+      <h4>Sua Rotina Personalizada</h4>
+      <p>Versão de 20, 45 ou 90 minutos — adaptada para a sua realidade e agenda</p>
+      <span class="pilar-time">Capítulo 3</span>
+    </div>
+    <div class="pilar">
+      <div class="pilar-icon">🛡️</div>
+      <h4>Vencer os Sabotadores</h4>
+      <p>Os 5 maiores inimigos da rotina matinal e como eliminá-los de uma vez</p>
+      <span class="pilar-time">Capítulo 4</span>
+    </div>
+  </div>
+  <div class="bonus">
+    <h4>🎁 BÔNUS — Checklist dos 30 Dias</h4>
+    <p>Plano semana a semana para criar o hábito de vez, sem perder o fio</p>
+  </div>
+</div>
+</div>
+
+<div class="dark-section">
+  <div class="dark-inner">
+    <h2 class="section-title">O que muda na sua vida</h2>
+    <p class="section-sub">Resultados que aparecem já na primeira semana</p>
+    <div class="bene"><div class="bene-icon">⚡</div><div><h4>Mais energia o dia todo</h4><p>Ao ativar o corpo e a mente logo cedo, você elimina aquela sensação de "nunca estou pronto" que arrasta o dia</p></div></div>
+    <div class="bene"><div class="bene-icon">🎯</div><div><h4>Clareza e foco real</h4><p>Saber exatamente o que precisa fazer hoje — e ter energia para fazer — muda completamente sua produtividade</p></div></div>
+    <div class="bene"><div class="bene-icon">😌</div><div><h4>Menos ansiedade</h4><p>Quando você começa o dia no controle, o estresse e a reatividade diminuem naturalmente</p></div></div>
+    <div class="bene"><div class="bene-icon">📈</div><div><h4>Resultados que se acumulam</h4><p>Em 30 dias de hábito, os resultados na carreira, saúde e relacionamentos se tornam visíveis</p></div></div>
+  </div>
+</div>
+
+<div class="section">
+  <h2 class="section-title">Quem já transformou as manhãs</h2>
+  <p class="section-sub">Histórias reais de pessoas reais</p>
+  <div class="depo">
+    <div class="stars">★★★★★</div>
+    <p>"Eu era daquelas que ficava no celular uma hora antes de levantar. Depois de 2 semanas seguindo o método, minha produtividade triplicou e ando dormindo melhor. Parece clichê mas é verdade."</p>
+    <div class="depo-name">— Fernanda S., designer freelancer</div>
+  </div>
+  <div class="depo">
+    <div class="stars">★★★★★</div>
+    <p>"Tentei mil vezes criar uma rotina e sempre desistia. A versão express de 20 minutos foi o que funcionou pra mim. Simples, rápido e real. Hoje já faço a versão de 45 minutos sem esforço."</p>
+    <div class="depo-name">— Ricardo M., pai de dois filhos</div>
+  </div>
+  <div class="depo">
+    <div class="stars">★★★★★</div>
+    <p>"O capítulo sobre os sabotadores me abriu os olhos. O celular no quarto era meu maior problema. Resolvi isso e o resto fluiu naturalmente. Valeu muito mais que os R$ 27."</p>
+    <div class="depo-name">— Juliana T., estudante universitária</div>
+  </div>
+</div>
+
+<div style="padding:0 24px 48px">
+<div style="max-width:660px;margin:0 auto">
+  <div class="garantia">
+    <div class="garantia-icon">🛡️</div>
+    <h3>Garantia total de 7 dias</h3>
+    <p>Leu o e-book, aplicou por uma semana e não sentiu diferença nenhuma? Devolvemos <strong>100% do seu dinheiro</strong>. Sem burocracia, sem perguntas. Risco zero para você.</p>
+  </div>
+
+  <h2 class="section-title" style="margin-bottom:8px">Perguntas frequentes</h2>
+  <p class="section-sub" style="margin-bottom:24px">Tire suas dúvidas antes de comprar</p>
+  <div class="faq"><h4>Precisa acordar cedo para funcionar?</h4><p>Não. O sistema se adapta ao seu horário. O que importa é o que você faz nos primeiros 30-60 minutos após acordar — seja às 5h ou às 9h.</p></div>
+  <div class="faq"><h4>Funciona para quem tem filhos e vida corrida?</h4><p>Sim! A versão express de 20 minutos foi criada exatamente para isso. Acorde 20 minutos antes e já é suficiente para começar.</p></div>
+  <div class="faq"><h4>Como recebo o e-book?</h4><p>Imediatamente após a compra, você recebe um e-mail com o link de acesso. Funciona em qualquer dispositivo — celular, tablet ou computador.</p></div>
+  <div class="faq"><h4>É um PDF ou vídeo?</h4><p>É um e-book em PDF completo, com checklist de 30 dias incluso. Você pode ler no celular, imprimir ou salvar.</p></div>
+</div>
+</div>
+
+<div class="final-cta">
+  <h2>Sua melhor manhã começa amanhã</h2>
+  <p>Acesso imediato ao e-book + checklist de 30 dias. Uma vez comprado, é seu para sempre.</p>
+  <a href="https://www.hotmart.com/seu-link-aqui" class="cta-white">Quero por R$ 27 agora →</a>
+  <p style="margin-top:20px;font-size:12px;color:#FFF0DC">🔒 Pagamento seguro • Acesso imediato • Garantia de 7 dias</p>
+</div>
+
+<div class="footer">
+  © 2026 Rotina Matinal de Alto Desempenho • Todos os direitos reservados<br>
+  <span style="font-size:11px">Dúvidas? Entre em contato: seuemail@email.com</span>
+</div>
+
+</body>
+</html>
